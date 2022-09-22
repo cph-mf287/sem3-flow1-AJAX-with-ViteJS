@@ -5,6 +5,20 @@ document.getElementById("all-content").style.display = "block";
   Add your JavaScript for all exercises Below or in separate js-files, which you must the import above
 */
 
+/**
+ * When buttons are inside forms, they submit the form and triggers the page to load again.
+ * Since we're making a single-page application, we don't want to load the page again after
+ * it has already been loaded once.
+ *
+ * To prevent page loads on form submit events, we use `preventDefault`.
+ */
+Array.prototype.slice.call(document.getElementsByTagName("form"))
+    .forEach(form => {
+      form.onsubmit = (evt) => {
+        evt.preventDefault(); // prevents forms from submitting and triggering a page load
+      }
+    })
+
 /* JS For Exercise-1 below */
 
 /* JS For Exercise-2 below */
