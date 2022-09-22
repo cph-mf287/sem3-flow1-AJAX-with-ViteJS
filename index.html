@@ -42,6 +42,7 @@
                         style="background-color: lightgrey"
                 >
                     <h5>All Users</h5>
+                    <button id="fetchUsersBtn">Refresh Users</button>
                     <table class="table">
                         <thead>
                         <tr>
@@ -53,24 +54,63 @@
                             <th>Email</th>
                         </tr>
                         </thead>
-
                         <tbody id="allUserRows"></tbody>
-                        <tbody></tbody>
                     </table>
                 </div>
                 <div class="col-md-4" style="background-color: powderblue">
                     <h5>Find User</h5>
+                    <form id="findUserForm">
+                        <label for="userIdToGet">Id:</label>
+                        <input id="userIdToGet" type="number" min="100" placeholder="Id">
+                        <button id="getUserBtn">Find user</button>
+                    </form>
+                    <div id="userDiv"></div>
                 </div>
             </div>
             <div class="row" style="min-height: 5em">
                 <div class="col-md-4" style="background-color: powderblue">
                     <h5>Add User</h5>
+                    <form id="addUserForm" method="post">
+                        <label for="addName">Name:</label>
+                        <input id="addName" type="text" placeholder="Name"><br>
+                        <label for="addAge">Age:</label>
+                        <input id="addAge" type="text" placeholder="Age"><br>
+                        Gender:
+                        <input id="addGenderM" type="radio" name="addGender" value="male">
+                        <label for="addGenderM">Male</label>
+                        <input id="addGenderF" type="radio" name="addGender" value="female">
+                        <label for="addGenderF">Female</label><br>
+                        <label for="addEmail">Email:</label>
+                        <input id="addEmail" type="text" placeholder="Email"><br>
+                        <button id="addUserBtn">Submit</button>
+                    </form>
                 </div>
                 <div class="col-md-4" style="background-color: lightgrey">
                     <h5>Edit User</h5>
+                    <form id="editUserForm" method="post">
+                        <label for="userIdToEdit">Id:</label>
+                        <input id="userIdToEdit" type="text" placeholder="Id"><br>
+                        <label for="editName">Name:</label>
+                        <input id="editName" type="text" placeholder="Name"><br>
+                        <label for="editAge">Age:</label>
+                        <input id="editAge" type="text" placeholder="Age"><br>
+                        Gender:
+                        <input id="editGenderM" type="radio" name="editGender" value="male">
+                        <label for="editGenderM">Male</label>
+                        <input id="editGenderF" type="radio" name="editGender" value="female">
+                        <label for="editGenderF">Female</label><br>
+                        <label for="editEmail">Email:</label>
+                        <input id="editEmail" type="text" placeholder="Email"><br>
+                        <button id="editUserBtn">Submit</button>
+                    </form>
                 </div>
                 <div class="col-md-4" style="background-color: powderblue">
                     <h5>Delete User</h5>
+                    <form id="deleteUserForm">
+                        <label for="userIdToDelete">Id:</label>
+                        <input id="userIdToDelete" type="number" min="100" placeholder="Id">
+                        <button id="deleteUserBtn">Delete user</button>
+                    </form>
                 </div>
             </div>
         </div>
